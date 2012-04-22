@@ -11,11 +11,13 @@
       <inputs>
         <key id='a' type='xs:string' paramType='path' required="true" />
         <key id='b' type='xs:string' paramType='variable' required="true" />
+        <key id='c' type='xs:string' paramType='variable' />
       </inputs>
       <execute><![CDATA[
           // Your javascript goes here. We will run it on our servers
           var rText = "some response text";
-          y.log("passed a: " + {a});
+          y.log("passed a: " + a);
+          y.log("passed c: " + c);
           response.object = <item>
                    <url>{request.url}</url>
                    <a>{a}</a>
