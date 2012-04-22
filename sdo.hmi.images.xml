@@ -1221,14 +1221,16 @@ y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size
 
                 var curr;
                 var found = "<images>";
+                var count = 0;
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
                     if(curr.match(matchRegex)){
+                        count++;
                         found += "<image>" + curr + "</image>";
                     }
                 }
                 found += "</images>";
-                
+                y.log("found count: " + count);
                 response.object = "<images><image>20120422_181500_M_color_512.jpg</image></images>";
             ]]></execute>
         </select>
