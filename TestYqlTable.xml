@@ -14,10 +14,13 @@
       </inputs>
       <execute><![CDATA[
           // Your javascript goes here. We will run it on our servers
+          var rText = "some response text";
+          
           response.object = <item>
                    <url>{request.url}</url>
                    <a>{a}</a>
                    <b>{b}</b>
+                   <rtext>rText</rtext>
                 </item>;
       ]]></execute>
     </select>
