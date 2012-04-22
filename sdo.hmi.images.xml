@@ -1219,13 +1219,13 @@
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
                     if(curr.match(matchRegex)){
-                        found += "<result>" + curr + "</result>";
+                        found += "<image>" + curr + "</image>";
                     }
                 }
                 
-                response.object = <resultset>
+                response.object = <images>
                 {found}
-                </resultset>;
+                </images>;
             ]]></execute>
         </select>
     </bindings>
