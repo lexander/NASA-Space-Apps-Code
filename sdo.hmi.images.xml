@@ -1217,7 +1217,7 @@
                 // filter based on passed values
                 var matchRegex = new RegExp("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
-y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
+y.log("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
                 var curr;
                 var found = "";
