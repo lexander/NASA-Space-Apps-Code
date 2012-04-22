@@ -9,7 +9,6 @@
     <bindings>
         <select itemPath="hmi.images" produces="XML">
             <urls>
-                <url env="all">http://jsoc.stanford.edu/data/hmi/images/{year}/{month}/{day}/{year}{month}{day}_{timestamp}_{imagetype}_{size}.jpg</url>
             </urls>
             <inputs>
                 <key id="year" type="xs:string" paramType="variable" default="2012" />
@@ -1217,18 +1216,18 @@
                 var matchRegex = new RegExp("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
                 var curr;
-                var found = [];
+                var found = "";
 
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
                     if(curr.match(matchRegex)){
-                        found.push(curr);
+                        found += "<result>" + curr + "</result>";
                     }
                 }
                 
-                response.object = <result>
-                found
-                </result>;
+                response.object = <resultset>
+                {found}
+                </resultset>;
             ]]></execute>
         </select>
     </bindings>
