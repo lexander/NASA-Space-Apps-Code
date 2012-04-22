@@ -1207,15 +1207,15 @@
                 "20120422_181500_M_color_512.jpg"];
 
 
-                year = year || "[0-9]{4,4}";
-                month = month || "[0-9]{2,2}";
-                date = day || "[0-9]{2,2}";
-                timestamp = timestamp || ".*"; // bad! but allows for trailing '_M'
-                imagetype = imagetype || ".*";
-                size = size || ".*";
+                var year = {year} || "[0-9]{4,4}";
+                var month = {month} || "[0-9]{2,2}";
+                var day = {day} || "[0-9]{2,2}";
+                var timestamp = {timestamp} || ".*"; // bad! but allows for trailing '_M'
+                var imagetype = {imagetype} || ".*";
+                var size = {size} || ".*";
 
                 // filter based on passed values
-                var matchRegex = new RegExp("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
+                var matchRegex = new RegExp("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
 y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
