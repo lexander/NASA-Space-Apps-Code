@@ -20,6 +20,7 @@
                 <key id="size" type="xs:string" paramType="variable" default="1k" />
             </inputs>
             <execute><![CDATA[
+                default xml namespace ='';
                 var imgList = ["20120422_000000_Ic_1k.jpg",
                 "20120422_000000_Ic_4k.jpg",
                 "20120422_000000_Ic_256.jpg",
@@ -1216,6 +1217,8 @@
                 // filter based on passed values
                 var matchRegex = new RegExp("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
+y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
+
                 var curr;
                 var found = "";
 
@@ -1227,6 +1230,7 @@
                 }
                 
                 response.object = <images><image>20120422_181500_M_color_512.jpg</image></images>;
+                y.log(response.object);
             ]]></execute>
         </select>
     </bindings>
