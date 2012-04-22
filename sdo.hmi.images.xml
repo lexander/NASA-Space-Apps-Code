@@ -8,6 +8,9 @@
     </meta>
     <bindings>
         <select itemPath="hmi.images" produces="XML">
+            <urls>
+                <url></url>
+            </urls>
             <inputs>
                 <key id="year" type="xs:string" paramType="variable" default="2012" />
                 <key id="month" type="xs:string" paramType="variable" default="04" />
@@ -1223,9 +1226,7 @@
                     }
                 }
                 
-                response.object = <images>
-                {found}
-                </images>;
+                response.object = <images><image>20120422_181500_M_color_512.jpg</image></images>;
             ]]></execute>
         </select>
     </bindings>
