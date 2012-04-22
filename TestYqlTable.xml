@@ -15,7 +15,7 @@
       <execute><![CDATA[
           // Your javascript goes here. We will run it on our servers
           var rText = "some response text";
-          
+          y.log("passed a: " + a);
           response.object = <item>
                    <url>{request.url}</url>
                    <a>{a}</a>
