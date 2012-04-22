@@ -7,7 +7,7 @@
         <sampleQuery>select * from {table} where year="2012" and month="04" and day="21" and imagetype="ic" and timestamp="000000" size="1k"</sampleQuery>
     </meta>
     <bindings>
-        <select itemPath="hmi.images" produces="XML">
+        <select itemPath="" produces="XML">
             <urls>
                 <url></url>
             </urls>
