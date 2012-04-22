@@ -1220,17 +1220,16 @@
 y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
                 var curr;
-                var found = "";
-
+                var found = "<images>";
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
                     if(curr.match(matchRegex)){
-                        found += "<image>" + curr + "</image>";
+                        found += "<image>" + {curr} + "</image>";
                     }
                 }
+                found += "</images>";
                 
-                response.object = <images><image>20120422_181500_M_color_512.jpg</image></images>;
-                y.log(response.object);
+                response.object = "<images><image>20120422_181500_M_color_512.jpg</image></images>";
             ]]></execute>
         </select>
     </bindings>
