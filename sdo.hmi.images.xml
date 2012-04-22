@@ -1224,7 +1224,7 @@ y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
                     if(curr.match(matchRegex)){
-                        found += "<image>" + {curr} + "</image>";
+                        found += "<image>" + curr + "</image>";
                     }
                 }
                 found += "</images>";
