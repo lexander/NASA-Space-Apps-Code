@@ -12,12 +12,12 @@
                 <url></url>
             </urls>
             <inputs>
-                <key id="year" type="xs:string" paramType="variable" default="2012" />
-                <key id="month" type="xs:string" paramType="variable" default="04" />
-                <key id="day" type="xs:string" paramType="variable" default="22" />
-                <key id="timestamp" type="xs:string" paramType="variable" default="000000" />
-                <key id="imagetype" type="xs:string" paramType="variable" default="Ic" />
-                <key id="size" type="xs:string" paramType="variable" default="1k" />
+                <key id="year" type="xs:string" paramType="variable" />
+                <key id="month" type="xs:string" paramType="variable" />
+                <key id="day" type="xs:string" paramType="variable" />
+                <key id="timestamp" type="xs:string" paramType="variable" />
+                <key id="imagetype" type="xs:string" paramType="variable" />
+                <key id="size" type="xs:string" paramType="variable" />
             </inputs>
             <execute><![CDATA[
                 default xml namespace ='';
@@ -1207,12 +1207,12 @@
                 "20120422_181500_M_color_512.jpg"];
 
 
-                var year = {year} || "[0-9]{4,4}";
-                var month = {month} || "[0-9]{2,2}";
-                var day = {day} || "[0-9]{2,2}";
-                var timestamp = {timestamp} || ".*"; // bad! but allows for trailing '_M'
-                var imagetype = {imagetype} || ".*";
-                var size = {size} || ".*";
+                var year = year || "[0-9]{4,4}";
+                var month = month || "[0-9]{2,2}";
+                var day = day || "[0-9]{2,2}";
+                var timestamp = timestamp || ".*"; // bad! but allows for trailing '_M'
+                var imagetype = imagetype || ".*";
+                var size = size || ".*";
 
                 // filter based on passed values
                 var matchRegex = new RegExp("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
