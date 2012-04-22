@@ -1215,7 +1215,6 @@
 
                 // filter based on passed values
                 var matchRegex = new RegExp("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
-                    console.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
                 var curr;
                 var found = [];
