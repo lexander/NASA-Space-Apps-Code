@@ -1220,7 +1220,7 @@
 y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
                 var curr;
-                var found = "<images>";
+                var found = "";
                 var count = 0;
                 for(var i = 0; i < imgList.length; i++){
                     curr = imgList[i];
@@ -1229,8 +1229,9 @@ y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size
                         found += "<image>" + curr + "</image>";
                     }
                 }
-                found += "</images>";
+                
                 y.log("found count: " + count);
+                y.log(found);
                 response.object = <images>found</images>;
             ]]></execute>
         </select>
