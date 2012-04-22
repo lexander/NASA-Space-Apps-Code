@@ -1231,7 +1231,7 @@ y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size
                 }
                 found += "</images>";
                 y.log("found count: " + count);
-                response.object = "<images><image>20120422_181500_M_color_512.jpg</image></images>";
+                response.object = <images>found</images>;
             ]]></execute>
         </select>
     </bindings>
