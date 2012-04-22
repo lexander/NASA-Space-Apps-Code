@@ -1217,8 +1217,6 @@
                 // filter based on passed values
                 var matchRegex = new RegExp("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
 
-y.log("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size + ".jpg");
-
                 var curr;
                 var found = "";
                 var count = 0;
@@ -1230,8 +1228,6 @@ y.log("^" + year + month + day + "_" + timestamp + "_" + imagetype + "_" + size 
                     }
                 }
                 
-                y.log("found count: " + count);
-                y.log(found);
                 response.object = "<images>" + found + "</images>";
             ]]></execute>
         </select>
