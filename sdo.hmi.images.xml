@@ -8,8 +8,6 @@
     </meta>
     <bindings>
         <select itemPath="hmi.images" produces="XML">
-            <urls>
-            </urls>
             <inputs>
                 <key id="year" type="xs:string" paramType="variable" default="2012" />
                 <key id="month" type="xs:string" paramType="variable" default="04" />
