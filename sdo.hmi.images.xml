@@ -4,7 +4,7 @@
         <author>Alexander Shusta</author>
         <documentationURL>https://github.com/lexander/NASA-Space-Apps-Code</documentationURL>
         <description>Solar Dynamics Observatory (SDO) data table pulling information from NASA's SDO project.</description>
-        <sampleQuery>select * from {table} where year="2012" and month="4" and day="21" and imagetype="continuum" and timestamp="000000" size="1"</sampleQuery>
+        <sampleQuery>select * from {table} where year="2012" and month="4" and day="21" and imagetype="ic" and timestamp="000000" size="1k"</sampleQuery>
     </meta>
     <bindings>
         <select itemPath="hmi.images" produces="XML">
@@ -12,12 +12,12 @@
                 <url env="all">http://jsoc.stanford.edu/data/hmi/images/{year}/{month}/{day}/{year}{month}{day}_{timestamp}_{imageType}_{size}.jpg</url>
             </urls>
             <inputs>
-                <key id="year" type="xs:string" paramType="" required="" />
-                <key id="month" type="xs:string" paramType="" required="" />
-                <key id="day" type="xs:string" paramType="" required="" />
-                <key id="timestamp" type="xs:string" paramType="" required="" />
-                <key id="imagetype" type="xs:string" paramType="" required="" />
-                <key id="size" type="xs:string" paramType="" required="" />
+                <key id="year" type="xs:string" paramType="path"  />
+                <key id="month" type="xs:string" paramType="path"  />
+                <key id="day" type="xs:string" paramType="path"  />
+                <key id="timestamp" type="xs:string" paramType="path" default="000000" />
+                <key id="imagetype" type="xs:string" paramType="path" default="ic" />
+                <key id="size" type="xs:string" paramType="path" default="1k" />
             </inputs>
     </bindings>
 </table>
