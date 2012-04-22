@@ -1232,7 +1232,7 @@ y.log("^" + year + month + date + "_" + timestamp + "_" + imagetype + "_" + size
                 
                 y.log("found count: " + count);
                 y.log(found);
-                response.object = <images>found</images>;
+                response.object = "<images>" + found + "</images>";
             ]]></execute>
         </select>
     </bindings>
