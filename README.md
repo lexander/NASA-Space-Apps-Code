@@ -11,7 +11,7 @@ To use the data-tables in this repository you can either:
 
 1. Set the "env" URL parameter of the YQL console to point to the ".env" file in this repository, e.g.
 ````
-    http://developer.yahoo.com/yql/console/?env=https://raw.github.com/lexander/NASA-Space-Apps-Code/master/allTables.env
+    https://developer.yahoo.com/yql/console/?env=https://raw.github.com/lexander/NASA-Space-Apps-Code/master/allTables.env
 ````
 2. Invoke the table using the "USE" operator in the YQL console, e.g.
 ````
